@@ -1,0 +1,56 @@
+QUESTION-1:
+-----------
+1.)
+
+>show user							
+
+>create user Employee identified by system;	
+
+>alter user Employee identified by Employee3902;	
+
+>grant create session to Employee;			
+
+>grant create table to Employee;			
+
+>grant unlimited tablespace to Employee;		
+
+>connect Employee/Employee3902;				
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2.)
+// Query for creating a Employee_Details table with EMP_ID, EMP_NAME, JOB_NAME, MANAGER_ID, HIRE_DATE, SALARY, DEPT_ID
+
+>create table Employee_Details(Emp_Id number(10), Emp_Name varchar2(30), Job_Name varchar2(30), Manager_Id number(10), hire_date date, salary number(10), Dept_id number(4));
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3.)
+// Query for inserting 10 records of data into table Employee_Details
+
+>insert into Employee_Details values (101, 'Koshal', 'President', 73012, '12-nov-2002', 200000, 1001);
+>insert into Employee_Details values (102, 'Surya', 'Assistant Manager', 73013, '26-nov-2001', 40000, 101);
+>insert into Employee_Details values(103, 'Hari', 'Designer', 73014, '15-jan-2001', 30000, 201);
+>insert into Employee_Details values(104, 'Krishna', 'Manager', 73015, '15-mar-2001', 30000, 201);
+>insert into EMPLOYEE_DETAILS values(105, 'Ganesh', 'Designer', 73016, '2-sep-2002', 45000, 301);
+>insert into EMPLOYEE_DETAILS values(106, 'Sai', 'Developer', 73017, '5-sep-2003', 35000, 301);
+>insert into EMPLOYEE_DETAILS values(107, 'John', 'Sales Representative', 73018, '17-may-2001', 50000, 301);
+>insert into EMPLOYEE_DETAILS values(108, 'Viswa', 'Designer', 73019, '07-apr-2001', 45000, 401);
+>insert into EMPLOYEE_DETAILS values(109, 'Raj', 'Developer', 7320, '27-nov-2002', 35000, 401);
+>insert into EMPLOYEE_DETAILS values(110, 'Manton', 'Vice-President', 73021, '02-mar-2022', 100000, 501);
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+4.)
+// Query for selecting the salaries of all the employees along with EMP_ID, EMP_NAME from the “Employee Details” table.
+
+>select Emp_Id, Emp_Name, Salary from Employee_Details;
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+5.)
+// Query for selecting the unique designations of the employees from the table
+
+>select distinct Job_Name FROM Employee_Details;
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+6.)
+// Query for updating the salary where the employee name is "Raj"
+
+>update Employee_Details set salary = 40000 where Emp_Name = 'Raj';
+
+
+

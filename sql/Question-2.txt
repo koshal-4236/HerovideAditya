@@ -1,0 +1,48 @@
+QUESTION-2:
+----------
+
+>show user							
+
+>create user Football identified by system;	
+
+>alter user Employee identified by Football3902;	
+
+>grant create session to Football;			
+
+>grant create table to Football;			
+
+>grant unlimited tablespace to Football;		
+
+>connect Football/Football3902;				
+
+
+
+// Query for creating a Football_Venue table with Venue_Id, Venue_Name, City_id, Capacity;
+
+> create table Football_Venue (Venue_Id number(5), Venue_Name varchar2(20), City_Id number(5), Capacity number(7));
+
+// Query for inserting 10 records of data into table Football_Venue
+
+>insert into Football_Venue values (101, 'India', 20101, 42115);
+>insert into Football_Venue values (102, 'Japan', 20202, 52115);
+>insert into Football_Venue values (103, 'Australia', 20304, 60115);
+>insert into Football_Venue values (104, 'Spain', 20405, 30115);
+>insert into Football_Venue values (105, 'Germany', 20506, 430115);
+>insert into Football_Venue values (106, 'London', 20607, 330115);
+>insert into Football_Venue values (107, 'Australia', 20708, 33849);
+>insert into Football_Venue values (108, 'Moscow', 20809, 23849);
+>insert into Football_Venue values (109, 'Argentina', 20902, 33399);
+>insert into Football_Venue values (110, 'South Korea', 21003, 53399);
+
+
+// Query for counting the number of venues of the football world cup
+
+>select count(*) from Football_Venue;
+
+// Query to list all the venue names and capacities in the format of “Location” and “Volume”.
+
+>select Venue_Name as Location, Capacity as Volume from Football_Venue;
+
+// Query to delete all the names where venue_name is australia.
+
+>delete from Football_Venue where Venue_Name = 'Australia';
